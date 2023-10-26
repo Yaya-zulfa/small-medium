@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tag -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <style>
+      /* Style Trendding-Content*/
+      #contents {
+        padding: 2em;
+      }
+      #contents-1 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+      #contents-1-number {
+        color: grey;
+        opacity: 0.5;
+      }
+      #contents-1-content {
+        padding: 1em;
+      }
+      #contents-1-content-title {
+        font-size: 1.2em;
+      }
+
+      /* Style Article*/
+      #article {
+        background-color: #f7f9fa;
+        padding: 1em 2em;
+      }
+      #article-1 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      /* Style Discover*/
+      #discover-and-footer {
+        padding: 1em 2em;
+      }
+      #discover-and-footer-title-topic-badge {
+        margin: 1em 1em;
+      }
+
+      /* layout mobile*/
+      @media screen and (max-width: 1400px) {
+        #carousel-right {
+          display: none;
+        }
+        #carousel {
+          padding: 2em 1em;
+        }
+        #carousel-left-caption {
+          padding: 0 1em;
+        }
+        #carousel-left-button {
+          padding: 1em 0;
+        }
+      }
+
+      /* layout website*/
+      @media screen and (min-width: 1400px) {
+        #carousel-left-button {
+          padding: 1em 0;
+          width: 20%;
+        }
+        #carousel {
+          margin: 2em 0em;
+        }
+        #wave {
+          margin-top: -400px;
+        }
+        #contents-1 {
+          padding: 1em;
+        }
+      }
+    </style>
+
+    <title>Anime World</title>
+  </head>
+  <body>
+    <section id="navbar" style="background-color: #fbe192">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbe192">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+            Anime
+          </a>
+          <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Write</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-secondary" type="submit" style="border-radius: 24px">Get Started</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr style="margin: 0px 0px; height: 3px; opacity: 0.5" />
+
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div id="carousel" class="row">
+                <div id="carousel-left" class="col">
+                  <div class="row">
+                    <div class="col">
+                      <h1 class="display03">
+                        <strong>A place to find your favorite anime characters</strong>
+                      </h1>
+                    </div>
+                  </div>
+                  <div id="carousel-left-caption" class="row">
+                    <p>In every anime film there are characters that many people like and that are currently trending <a href="#">Learn More</a></p>
+                  </div>
+                  <div id="carousel-left-button" class="row">
+                    <button class="btn btn-warning">Get Started</button>
+                  </div>
+                </div>
+                <div id="carousel-right" class="col">
+                  <img src="image1.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L80,117.3C160,139,320,181,480,170.7C640,160,800,96,960,96C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section id="trending">
+      <div class="container">
+        <div id="title" class="row">
+          <h3><img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-center" /> Trending on Anime Characters</h3>
+        </div>
+        <div id="contents" class="row">
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>01</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Gojo Sotaru
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>The Strongest Wizard of Our Time</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>02</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="Toge Inumaki.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Toge Inumaki
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>The Cursed Seal of the Inumaki Clan</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>03</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="Zen Wisteria.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Zen Wisteria
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>The Second Prince of Clarines</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>04</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="Levi Ackerman.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Levi Ackerman
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>Humanity Strongest Soldier</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>05</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="Tetora Nagumo.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Tetora Nagumo
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>One of the Members of the RYUSEITAI Unit</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>06</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0; font-size: 1.5em">
+                      <img src="Koga Ogami.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                      Koga Ogami
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p style="margin-bottom: 0; font-size: 1em">
+                    <strong>One of the Members of the UNDEAD Unit</strong>
+                  </p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p>22 November | 15 min read <i class="bi bi-heart-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="margin: 0px 0px; height: 3px; opacity: 0.5" />
+
+    <section id="multi-section">
+      <div class="container">
+        <div class="row">
+          <div id="article" class="col-md-8">
+            <div id="article-1" class="card">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <h5 class="card-title">
+                    <img src="Toge Inumaki.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                    Toge Inumaki
+                  </h5>
+                  <p class="card-text" style="margin-bottom: 0"><strong>The Cursed Seal of the Inumaki Clan</strong></p>
+                  <p class="card-text">Inumaki Toge comes from the Inumaki clan who has the power to force people who hear his words to obey his words, with a sign like a carving around Inumaki Toge's mouth called "Snake and Fangs".</p>
+                  <div class="card-text row">
+                    <div class="col-md-8">
+                      <small class="text-body-secondary">22 November | 15 min</small>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <i class="bi bi-bookmark-plus"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <img src="Toge-Panda.jpeg" class="img-fluid rounded-start" alt="..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="article-1" class="card">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <h5 class="card-title">
+                    <img src="Times.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-center" />
+                    Times
+                  </h5>
+                  <p class="card-text" style="margin-bottom: 0"><strong>The Seven Deadly Sins</strong></p>
+                  <p class="card-text">The 7 major sins in the webtoon "Deadly 7 Inside Me" by Deruu RioTa are Laziness, Gluttony, Greed, Lust, Greed, Anger, and Envy.</p>
+                  <div class="card-text row">
+                    <div class="col-md-8">
+                      <small class="text-body-secondary">22 November | 15 min</small>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <i class="bi bi-bookmark-plus"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <img src="7 Major Sins.jpeg" class="img-fluid rounded-start" alt="..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="discover-and-footer" class="col-md-4">
+            <div id="discover-and-footer-title" class="row">
+              <h5>Discover more of what matters to you</h5>
+            </div>
+            <div id="discover-and-footer-title-topic" class="row align-items-center">
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">
+                  Topics
+                  <!--<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>-->
+                </button>
+              </div>
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">Topics</button>
+              </div>
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">Topics</button>
+              </div>
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">Topics</button>
+              </div>
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">Topics</button>
+              </div>
+              <div id="discover-and-footer-title-topic-badge" class="col-2">
+                <button type="button" class="btn btn-outline-secondary position-relative">Topics</button>
+              </div>
+              <div class="col-6">
+                <a href="#">See All Topics</a>
+              </div>
+            </div>
+            <div id="discover-and-footer-title-subcribe" class="row">
+              <h5>Subscribe for more</h5>
+              <p>Get notified when we publish something new!</p>
+            </div>
+            <div id="discover-and-footer-title-form" class="row">
+              <form class="row">
+                <div class="col-auto">
+                  <label for="inputPassword2" class="visually-hidden">Password</label>
+                  <input type="text" class="form-control" id="inputPassword2" placeholder="chenle@gmail.com" />
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-warning" style="border-radius: 0">Submit</button>
+                </div>
+              </form>
+            </div>
+            <hr style="height: 3px; opacity: 0.5" />
+            <div id="footer" class="row align-items-center">
+              <div id="footer-help" class="col-2">
+                <small><b>Help</b></small>
+              </div>
+              <div id="footer-status" class="col-2">
+                <small><b>Status</b></small>
+              </div>
+              <div id="footer-writers" class="col-2">
+                <small><b>Writers</b></small>
+              </div>
+              <div id="footer-blog" class="col-2">
+                <small><b>Blog</b></small>
+              </div>
+              <div id="footer-privacy" class="col-2">
+                <small><b>Privacy</b></small>
+              </div>
+              <div id="footer-term" class="col-2">
+                <small><b>Term</b></small>
+              </div>
+              <div id="footer-about" class="col-2">
+                <small><b>About</b></small>
+              </div>
+              <div class="row" style="margin-top: 1em">
+                <p>Created with <i class="bi bi-heart"></i> by Nisa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JS: Choose one for the two! -->
+
+    <!-- Optional 1: Bootstrap bundle the Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Optional 2: Separete Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
